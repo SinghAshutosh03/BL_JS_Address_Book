@@ -68,3 +68,8 @@ function contactDetails(firstName,lastName,address,state,city,zipCode,email,phon
         }
     }   
 }
+
+//UC3
+var addressBook = new Array();
+addressBook.push(new Contact('John', 'Snow', 'address', 'westeros', 'winterfell', 222222, 'test@example.com', 9999999999));
+console.log(addressBook);
