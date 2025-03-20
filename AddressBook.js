@@ -73,3 +73,41 @@ function contactDetails(firstName,lastName,address,state,city,zipCode,email,phon
 var addressBook = new Array();
 addressBook.push(new Contact('John', 'Snow', 'address', 'westeros', 'winterfell', 222222, 'test@example.com', 9999999999));
 console.log(addressBook);
+
+
+function editContact(findName,editedVariable,variableNewValue){
+    if(addressBook.length == null){
+        console.log("Add Contact In Address Book");
+    }else{
+        addressBook.forEach(newContact => {
+            if(newContact.firstName == findName){
+                switch(editedVariable){
+                    case "firstName":
+                        newContact.firstName = variableNewValue;
+                        break;
+                    case "lastName":
+                        newContact.lastName = variableNewValue;
+                        break;
+                    case "address":
+                        newContact.address = variableNewValue;
+                        break;
+                    case "state":
+                        newContact.state = variableNewValue;
+                        break;
+                    case "city":
+                        newContact.city = variableNewValue;
+                        break;
+                    case "zipCode":
+                        newContact.zipCode = variableNewValue;
+                        break;  
+                    case "firstName":
+                        newContact.firstName = variableNewValue;
+                        break;
+                    case "lastName":
+                        newContact.lastName = variableNewValue;
+                        break;      
+                }
+            }
+        })
+    }
+}
